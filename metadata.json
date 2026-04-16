@@ -1,0 +1,9 @@
+{
+  "name": "Live Car",
+  "description": "Premium automotive service application for Saudi Arabia featuring vehicle diagnosis, booking, and wallet management with a high-fidelity UI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
