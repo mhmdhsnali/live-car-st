@@ -13,8 +13,13 @@ type Message = {
   data?: any;
 };
 
-export default function AIAssistant() {
+export default function AIAssistant({ onOpenChange }: { onOpenChange?: (isOpen: boolean) => void }) {
   const [isOpen, setIsOpen] = useState(false);
+  
+  useEffect(() => {
+    onOpenChange?.(isOpen);
+  }, [isOpen, onOpenChange]);
+
   const [messages, setMessages] = useState<Message[]>([
     { id: '1', role: 'assistant', text: 'مرحباً! أنا مساعد Live Car الذكي. كيف يمكنني مساعدتك اليوم؟' }
   ]);
